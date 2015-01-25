@@ -47,8 +47,8 @@ Note that we also observe *some data* in the test set, only to discard it! That 
 ```{r}
 print(sprintf("The proportion of NA in training values is rather high: %0.2f", 
     sum(is.na(training))/(prod(dim(training)))))
-print(sprintf("but not so for testing: %0.2f", 
-              sum(is.na(testing))/(prod(dim(training)))))
+print(sprintf("and also for testing: %0.2f", 
+              sum(is.na(testing))/(prod(dim(testing)))))
 #Some columns are completely filled with NAs
 deletedColumns <- union(
     union(deletedColumns, 
